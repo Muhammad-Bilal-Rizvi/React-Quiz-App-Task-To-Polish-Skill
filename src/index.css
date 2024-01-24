@@ -24,3 +24,20 @@ code {
     margin: auto;
     width: 90%;
 }
+.QuestionMainDiv {
+  /* margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px; */
+  /* display: flex !important; 
+  justify-content: center !important; */
+  margin: auto;
+  height: 1500%;
+  width: 50%;
+  background-color: lightgray;
+}
+
+.QuestionMcqsDiv {
+  display: flex;
+  justify-content: space-between;
+}

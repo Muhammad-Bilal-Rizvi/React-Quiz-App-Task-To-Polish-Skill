@@ -17,6 +17,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="text-center mt-6 text-2xl">
+      <h1>Expertizo Engineering React Quiz Challenge</h1>
+      </div>
       <RouterProvider router={router} />
     </div>
   );
@@ -27,5 +30,7 @@ export default App;
 // My First Day Task:
 // https://github.com/Expertizo/React-Test
 
+// To view online your github repo code: (vscode.dev)
+//https://vscode.dev/github/mustafazuberi/foodpanda-clone-
 
-//https://github.com/Expertizo/React-Test/blob/master/README.md
+
