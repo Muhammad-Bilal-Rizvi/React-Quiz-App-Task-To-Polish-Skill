@@ -113,7 +113,7 @@
       "difficulty": "medium",
       "question": "In%20the%20game%20%22Subnautica%22%2C%20a%20%22Cave%20Crawler%22%20will%20attack%20you.",
       "correct_answer": "True",
-      "incorrect_answers": ["False","First","Second"]
+      "incorrect_answers": ["False"]
     },
     {
       "category": "Entertainment%3A%20Japanese%20Anime%20%26%20Manga",
@@ -169,7 +169,7 @@
       "difficulty": "easy",
       "question": "Scotland%20voted%20to%20become%20an%20independent%20country%20during%20the%20referendum%20from%20September%202014.",
       "correct_answer": "False",
-      "incorrect_answers": ["True","First","Second"]
+      "incorrect_answers": ["True"]
     },
     {
       "category": "Entertainment%3A%20Video%20Games",
