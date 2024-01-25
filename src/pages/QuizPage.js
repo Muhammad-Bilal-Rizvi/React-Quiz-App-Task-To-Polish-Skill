@@ -79,6 +79,15 @@ const Quiz = () => {
           Next
         </button>
       </div>
+      <div className="bottomScore mt-60">
+          <div className="flex flex-row flex-wrap justify-between scoreMention">
+            <p>Score: 67%</p>
+            <p>Max Score: 75%</p>
+          </div>
+          <div className="h-8 bg-gray-200 border-2 border-black border-solid rounded colorMention ">
+
+          </div>
+      </div>
     </div>
   );
 };
