@@ -169,7 +169,7 @@
       "difficulty": "easy",
       "question": "Scotland%20voted%20to%20become%20an%20independent%20country%20during%20the%20referendum%20from%20September%202014.",
       "correct_answer": "False",
-      "incorrect_answers": ["True"]
+      "incorrect_answers": ["True","First","Second"]
     },
     {
       "category": "Entertainment%3A%20Video%20Games",
