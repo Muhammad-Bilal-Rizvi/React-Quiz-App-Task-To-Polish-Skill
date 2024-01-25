@@ -8,6 +8,7 @@ const Quiz = () => {
   const [questionNum, setQuestionNum] = useState(0);
   const [CountCorrectQuestion, setCountCorrectQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
+  const [correctPercentage, setCorrectPercentage] = useState(0)
   const maxScore = (totalQues, correctQues, attemptedQues) => { };
 
   const onNext = () => {
@@ -24,7 +25,10 @@ const Quiz = () => {
   const onOptionSelecton = (value) => {
     setSelectedOption(value);
     if (jsonData[questionNum].correct_answer === value) {
-      setCountCorrectQuestion(CountCorrectQuestion + 1);
+      const correctCount = CountCorrectQuestion + 1;
+      setCountCorrectQuestion(correctCount);
+      setCorrectPercentage((correctCount/jsonData.length) * 100);
+
     }
   }
 
@@ -87,7 +91,7 @@ const Quiz = () => {
       </>
       }      <div className="bottomScore mt-60">
         <div className="flex flex-row flex-wrap justify-between scoreMention">
-          <p>Score: 67%</p>
+          <p>Score: {correctPercentage}%</p>
           <p>Max Score: 75%</p>
         </div>
         <div className="h-8 bg-gray-200 border-2 border-black border-solid rounded colorMention ">
