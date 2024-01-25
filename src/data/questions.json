@@ -113,7 +113,7 @@
       "difficulty": "medium",
       "question": "In%20the%20game%20%22Subnautica%22%2C%20a%20%22Cave%20Crawler%22%20will%20attack%20you.",
       "correct_answer": "True",
-      "incorrect_answers": ["False"]
+      "incorrect_answers": ["False","First","Second"]
     },
     {
       "category": "Entertainment%3A%20Japanese%20Anime%20%26%20Manga",

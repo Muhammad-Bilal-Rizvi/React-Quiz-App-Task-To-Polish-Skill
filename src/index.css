@@ -22,7 +22,8 @@ code {
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 90%;
+    width: 40%;
+    /* height: 20%; */
 }
 .QuestionMainDiv {
   /* margin-top: 20px;
