@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="text-center mt-6 text-2xl">
-      <h1>Expertizo Engineering React Quiz Challenge</h1>
+      <div className="mt-6 text-2xl text-center">
+      {/* <h1>Expertizo Engineering React Quiz Challenge</h1> */}
       </div>
       <RouterProvider router={router} />
     </div>
