@@ -27,6 +27,10 @@ function App() {
 
 export default App;
 
+//react-rating-stars-component ⭐️
+//https://www.npmjs.com/package/react-rating-stars-component
+
+
 // My First Day Task:
 // https://github.com/Expertizo/React-Test
 
