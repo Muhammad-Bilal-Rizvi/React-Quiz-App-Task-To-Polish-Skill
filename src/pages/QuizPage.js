@@ -11,6 +11,8 @@ const Quiz = () => {
   const [correctPercentage, setCorrectPercentage] = useState(0)
   
   const maxScore = (totalQues, correctQues, attemptedQues) => { };
+  
+  const minScore = (totalQues, correctQues, attemptedQues) => { };
 
   const onNext = () => {
     const cuurentQuesNumber = questionNum + 1 + 1;
