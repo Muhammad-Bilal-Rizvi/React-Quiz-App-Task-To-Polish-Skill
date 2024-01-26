@@ -102,10 +102,10 @@ const Quiz = () => {
           <div className="currentScore" style={{ width: `${correctPercentage}%`, backgroundColor: "black", height: "30px" }}>
 
           </div>
-          <div className="minimumScore">
+          <div className="maximumScore">
 
           </div>
-          <div className="maximumScore">
+          <div className="minimumScore">
 
           </div>
         </div>
