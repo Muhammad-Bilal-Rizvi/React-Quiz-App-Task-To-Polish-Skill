@@ -73,7 +73,7 @@
       "difficulty": "easy",
       "question": "Kangaroos%20keep%20food%20in%20their%20pouches%20next%20to%20their%20children.",
       "correct_answer": "False",
-      "incorrect_answers": ["True","First","Second"] 
+      "incorrect_answers": ["True"] 
     },
     {
       "category": "General%20Knowledge",
