@@ -9,6 +9,7 @@ const Quiz = () => {
   const [CountCorrectQuestion, setCountCorrectQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const [correctPercentage, setCorrectPercentage] = useState(0)
+  
   const maxScore = (totalQues, correctQues, attemptedQues) => { };
 
   const onNext = () => {
@@ -96,6 +97,15 @@ const Quiz = () => {
         </div>
         <div className="h-8 bg-gray-200 border-2 border-black border-solid rounded colorMention ">
 
+          <div className="currentScore" style={{ width: `${correctPercentage}%`, backgroundColor: "black", height: "30px" }}>
+
+          </div>
+          <div className="minimumScore">
+
+          </div>
+          <div className="maximumScore">
+
+          </div>
         </div>
       </div>
     </div>
