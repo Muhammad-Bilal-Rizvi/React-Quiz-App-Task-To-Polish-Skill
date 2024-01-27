@@ -36,13 +36,13 @@ const Quiz = () => {
     if (jsonData[questionNum].correct_answer === value) {
       correctCount = CountCorrectQuestion + 1;
       setCountCorrectQuestion(correctCount);
-    }else {
+    } else {
       correctCount = CountCorrectQuestion
     }
     setCorrectPercentage(Math.round((correctCount / (questionNum + 1)) * 100));
     setMinPercentage(Math.round((correctCount / jsonData.length) * 100));
     setMaxPercentage(Math.round((((jsonData.length - (questionNum + 1)) + (correctCount)) / jsonData.length) * 100));
-  }
+  }                         //            20             14 + 1               10                  20
 
   const options = [...jsonData[questionNum].incorrect_answers, jsonData[questionNum].correct_answer]
   // console.log(decodeURI(jsonData[0].category))
@@ -86,7 +86,7 @@ const Quiz = () => {
         </h1>
       </div>
       <div className="flex flex-row flex-wrap justify-between mt-6 QuestionMcqsDiv gap-y-10">
-        {options.map((op) => <button disabled={selectedOption} onClick={() => { onOptionSelecton(op) }} className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
+        {options.map((op) => <button disabled={selectedOption ? true : false} onClick={() => { onOptionSelecton(op) }} className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
           {decodeURIComponent(op)}
         </button>)}
       </div>
@@ -110,16 +110,32 @@ const Quiz = () => {
           <p>Score: {correctPercentage}%</p>
           <p>Max Score: {maxPercentage}%</p>
         </div>
-        <div className="h-8 bg-gray-200 border-2 border-black border-solid rounded colorMention ">
+        <div className="h-8 border-2 border-black border-solid rounded colorMention " style={{ position: 'relative' }}>
 
-          <div className="currentScore" style={{ width: `${correctPercentage}%`, backgroundColor: "black", height: "30px" }}>
-
+          <div className="minimumScore" style={{
+            backgroundColor: "black",
+            height: "30px",
+            position: "absolute",
+            left: 0,
+            zIndex: 3, width: `${minPercentage}%`
+          }}>
           </div>
-          <div className="maximumScore">
 
+          <div className="currentScore" style={{
+            backgroundColor: "darkgrey",
+            height: "30px",
+            position: "absolute",
+            left: 0,
+            zIndex: 2, width: `${correctPercentage}%`
+          }}>
           </div>
-          <div className="minimumScore">
-
+          <div className="maximumScore" style={{
+            backgroundColor: "lightgrey",
+            height: "30px",
+            position: "absolute",
+            left: 0,
+            zIndex: 1, width: `${maxPercentage}%`
+          }}>
           </div>
         </div>
       </div>
