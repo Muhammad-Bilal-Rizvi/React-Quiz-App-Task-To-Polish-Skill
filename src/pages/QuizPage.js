@@ -8,16 +8,21 @@ const Quiz = () => {
   const [questionNum, setQuestionNum] = useState(0);
   const [CountCorrectQuestion, setCountCorrectQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
-  const [correctPercentage, setCorrectPercentage] = useState(0)
-  
-  const maxScore = (totalQues, correctQues, attemptedQues) => { };
-  
+  const [correctPercentage, setCorrectPercentage] = useState(0);
+  const [minPercentage, setMinPercentage] = useState(0);
+  const [maxPercentage, setMaxPercentage] = useState(0);
+
+  const maxScore = (totalQues, correctQues, attemptedQues) => {
+
+
+  };
+
   const minScore = (totalQues, correctQues, attemptedQues) => { };
 
   const onNext = () => {
     const cuurentQuesNumber = questionNum + 1 + 1;
-    console.log(jsonData.length);
-    console.log(cuurentQuesNumber);
+    // console.log(jsonData.length);
+    // console.log(cuurentQuesNumber);
     setSelectedOption('');
 
     if (jsonData.length >= cuurentQuesNumber) {
@@ -27,25 +32,32 @@ const Quiz = () => {
 
   const onOptionSelecton = (value) => {
     setSelectedOption(value);
+    let correctCount = 0;
     if (jsonData[questionNum].correct_answer === value) {
-      const correctCount = CountCorrectQuestion + 1;
+      correctCount = CountCorrectQuestion + 1;
       setCountCorrectQuestion(correctCount);
-      setCorrectPercentage((correctCount/jsonData.length) * 100);
-
+    }else {
+      correctCount = CountCorrectQuestion
     }
+    setCorrectPercentage(Math.round((correctCount / (questionNum + 1)) * 100));
+    setMinPercentage(Math.round((correctCount / jsonData.length) * 100));
+    setMaxPercentage(Math.round((((jsonData.length - (questionNum + 1)) + (correctCount)) / jsonData.length) * 100));
   }
 
   const options = [...jsonData[questionNum].incorrect_answers, jsonData[questionNum].correct_answer]
   // console.log(decodeURI(jsonData[0].category))
   // console.log(uriToJSON(JSON.stringify(jsonData) ))
   console.log({ CountCorrectQuestion })
-
+  console.log({ questionNum })
+  console.log({ minPercentage });
+  console.log({ maxPercentage });
+  console.log({ correctPercentage })
+  console.log("================================")
   return (
     <div className="p-8 QuestionMainDiv my-50">
       <div style={{ width: `${((questionNum + 1) / jsonData.length) * 100}%`, backgroundColor: "black", height: "5px" }}></div>
       <div className="QuestionNumDiv">
         <h1 className="text-2xl font-bold">
-          {" "}
           Question {questionNum + 1} of 20
         </h1>
         <h3>{decodeURIComponent(jsonData[questionNum].category)}</h3>
@@ -74,28 +86,29 @@ const Quiz = () => {
         </h1>
       </div>
       <div className="flex flex-row flex-wrap justify-between mt-6 QuestionMcqsDiv gap-y-10">
-        {options.map((op) => <button onClick={() => { onOptionSelecton(op) }} className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
+        {options.map((op) => <button disabled={selectedOption} onClick={() => { onOptionSelecton(op) }} className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
           {decodeURIComponent(op)}
         </button>)}
       </div>
 
-      {selectedOption && 
-      <>
-      <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">{selectedOption === jsonData[questionNum].correct_answer ? "Correct" : "Sorry"} </div>
-      
-      <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">
-        <button
-          onClick={onNext}
-          className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded"
-        >
-          Next
-        </button>
-      </div>
-      </>
-      }      <div className="bottomScore mt-60">
+      {selectedOption &&
+        <>
+          <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">{selectedOption === jsonData[questionNum].correct_answer ? "Correct" : "Wrong"} </div>
+
+          <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">
+            <button
+              onClick={onNext}
+              className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded"
+            >
+              Next
+            </button>
+          </div>
+        </>
+      }
+      <div className="bottomScore mt-10">
         <div className="flex flex-row flex-wrap justify-between scoreMention">
           <p>Score: {correctPercentage}%</p>
-          <p>Max Score: 75%</p>
+          <p>Max Score: {maxPercentage}%</p>
         </div>
         <div className="h-8 bg-gray-200 border-2 border-black border-solid rounded colorMention ">
 

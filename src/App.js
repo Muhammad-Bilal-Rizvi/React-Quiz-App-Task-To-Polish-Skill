@@ -41,4 +41,8 @@ export default App;
 // https://www.youtube.com/watch?v=UX5HIrxbRUc&t=2s
 
 //https://github.com/sameer550/React-Quiz-App
-//
+
+//Right-click on an empty area of the website or choose an element, and click on Inspect. 
+//Alternatively, you can use the keyboard shortcut Ctrl+Shift+C.
+
+
