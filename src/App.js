@@ -45,4 +45,10 @@ export default App;
 //Right-click on an empty area of the website or choose an element, and click on Inspect. 
 //Alternatively, you can use the keyboard shortcut Ctrl+Shift+C.
 
+//Build and Deploy a Fully Responsive Website with Modern UI/UX in React JS with Tailwind 
+//(JavaScript Mastery - Youtube chanal)
+//https://www.youtube.com/watch?v=_oO4Qi5aVZs&t=121s
+
+//React Tutorial for Beginners (Programming with Mosh)
+//https://www.youtube.com/watch?v=SqcY0GlETPk
 

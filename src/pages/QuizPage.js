@@ -86,56 +86,63 @@ const Quiz = () => {
         </h1>
       </div>
       <div className="flex flex-row flex-wrap justify-between mt-6 QuestionMcqsDiv gap-y-10">
-        {options.map((op) => <button disabled={selectedOption ? true : false} onClick={() => { onOptionSelecton(op) }} className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
+        {options.map((op) => <button disabled={selectedOption ? true : false}
+          onClick={() => { onOptionSelecton(op) }}
+          className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded">
           {decodeURIComponent(op)}
         </button>)}
       </div>
 
       {selectedOption &&
         <>
-          <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">{selectedOption === jsonData[questionNum].correct_answer ? "Correct" : "Wrong"} </div>
+          <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">
+            {selectedOption === jsonData[questionNum].correct_answer ? "Correct" : "Wrong"}
+          </div>
 
           <div className="flex flex-row flex-wrap justify-center mt-10 QuestionScoreBarDiv">
             <button
               onClick={onNext}
               className="border-2 border-black border-solid w-[45%] bg-gray-200 font-bold rounded"
             >
-              Next
+              Next Question
             </button>
           </div>
         </>
       }
-      <div className="bottomScore mt-10">
-        <div className="flex flex-row flex-wrap justify-between scoreMention">
-          <p>Score: {correctPercentage}%</p>
-          <p>Max Score: {maxPercentage}%</p>
-        </div>
-        <div className="h-8 border-2 border-black border-solid rounded colorMention " style={{ position: 'relative' }}>
-
-          <div className="minimumScore" style={{
-            backgroundColor: "black",
-            height: "30px",
-            position: "absolute",
-            left: 0,
-            zIndex: 3, width: `${minPercentage}%`
-          }}>
+      <div style={{ position: 'absolute', bottom: '0px', width: '91%'}}>
+        <div className="bottomScore mt-10">
+          <div className="flex flex-row flex-wrap justify-between scoreMention">
+            <p>Score: {correctPercentage}%</p>
+            <p>Max Score: {maxPercentage}%</p>
           </div>
+          <div className="h-8 border-2 border-black border-solid rounded colorMention "
+            style={{ position: 'relative' }}>
 
-          <div className="currentScore" style={{
-            backgroundColor: "darkgrey",
-            height: "30px",
-            position: "absolute",
-            left: 0,
-            zIndex: 2, width: `${correctPercentage}%`
-          }}>
-          </div>
-          <div className="maximumScore" style={{
-            backgroundColor: "lightgrey",
-            height: "30px",
-            position: "absolute",
-            left: 0,
-            zIndex: 1, width: `${maxPercentage}%`
-          }}>
+            <div className="minimumScore" style={{
+              backgroundColor: "black",
+              height: "30px",
+              position: "absolute",
+              left: 0,
+              zIndex: 3, width: `${minPercentage}%`
+            }}>
+            </div>
+
+            <div className="currentScore" style={{
+              backgroundColor: "darkgrey",
+              height: "30px",
+              position: "absolute",
+              left: 0,
+              zIndex: 2, width: `${correctPercentage}%`
+            }}>
+            </div>
+            <div className="maximumScore" style={{
+              backgroundColor: "lightgrey",
+              height: "30px",
+              position: "absolute",
+              left: 0,
+              zIndex: 1, width: `${maxPercentage}%`
+            }}>
+            </div>
           </div>
         </div>
       </div>
