@@ -29,28 +29,3 @@ function App() {
 
 export default App;
 
-//react-rating-stars-component ⭐️
-//https://www.npmjs.com/package/react-rating-stars-component
-
-
-// My First Day Task:
-// https://github.com/Expertizo/React-Test
-
-// To view online your github repo code: (vscode.dev)
-//https://vscode.dev/github/mustafazuberi/foodpanda-clone-
-
-// Youtube Link (similar react project)
-// https://www.youtube.com/watch?v=UX5HIrxbRUc&t=2s
-
-//https://github.com/sameer550/React-Quiz-App
-
-//Right-click on an empty area of the website or choose an element, and click on Inspect. 
-//Alternatively, you can use the keyboard shortcut Ctrl+Shift+C.
-
-//Build and Deploy a Fully Responsive Website with Modern UI/UX in React JS with Tailwind 
-//(JavaScript Mastery - Youtube chanal)
-//https://www.youtube.com/watch?v=_oO4Qi5aVZs&t=121s
-
-//React Tutorial for Beginners (Programming with Mosh)
-//https://www.youtube.com/watch?v=SqcY0GlETPk
-
