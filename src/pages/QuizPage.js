@@ -12,10 +12,7 @@ const Quiz = () => {
   const [minPercentage, setMinPercentage] = useState(0);
   const [maxPercentage, setMaxPercentage] = useState(0);
 
-  const maxScore = (totalQues, correctQues, attemptedQues) => {
-
-
-  };
+  const maxScore = (totalQues, correctQues, attemptedQues) => { };
 
   const minScore = (totalQues, correctQues, attemptedQues) => { };
 
