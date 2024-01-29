@@ -1,17 +1,19 @@
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import QuizStart from "./pages/StartPage";
-import Quiz from "./pages/QuizPage";
+//import QuizStart from "./pages/StartPage";
+//import Quiz from "./pages/QuizPage";
+import StartPage from "./pages/StartPage";
+import QuizPage from "./pages/QuizPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <QuizStart />,
+      element: <StartPage />,
     },
     {
       path: "/quiz",
-      element: <Quiz />,
+      element: <QuizPage />,
     },
   ]);
 
