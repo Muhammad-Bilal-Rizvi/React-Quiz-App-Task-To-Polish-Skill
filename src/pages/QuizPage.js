@@ -24,7 +24,7 @@ const Quiz = () => {
     // console.log(jsonData.length);
     // console.log(cuurentQuesNumber);
     setSelectedOption('');
-
+             //(0 - 19)       (2 - 21) -> MyOpinion (2-19 but...)
     if (jsonData.length >= cuurentQuesNumber) {
       setQuestionNum(questionNum + 1);
     }
@@ -110,7 +110,7 @@ const Quiz = () => {
         </>
       }
       <div style={{ position: 'absolute', bottom: '0px', width: '91%'}}>
-        <div className="bottomScore mt-10">
+        <div className="mt-10 bottomScore">
           <div className="flex flex-row flex-wrap justify-between scoreMention">
             <p>Score: {correctPercentage}%</p>
             <p>Max Score: {maxPercentage}%</p>
