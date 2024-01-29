@@ -24,7 +24,8 @@ const Quiz = () => {
     // console.log(jsonData.length);
     // console.log(cuurentQuesNumber);
     setSelectedOption('');
-             //(0 - 19)       (2 - 21) -> MyOpinion (2-19 but...)
+             //(1 - 20)       (2 - 21) -> MyOpinion (2-19 but...)
+             //length always count from 1
     if (jsonData.length >= cuurentQuesNumber) {
       setQuestionNum(questionNum + 1);
     }
