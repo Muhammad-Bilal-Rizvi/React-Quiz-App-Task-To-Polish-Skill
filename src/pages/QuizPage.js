@@ -24,7 +24,7 @@ const Quiz = () => {
              //(1 - 20)       (2 - 21) -> MyOpinion (2-19 but...)
              //length always count from 1
     if (jsonData.length >= cuurentQuesNumber) {
-      setQuestionNum(questionNum + 1);
+      setQuestionNum(questionNum + 1);  //(1 - 20)
     }
   };
 
@@ -53,7 +53,7 @@ const Quiz = () => {
   console.log("================================")
   return (
     <div className="p-8 QuestionMainDiv my-50">
-      <div style={{ width: `${((questionNum + 1) / jsonData.length) * 100}%`, backgroundColor: "black", height: "5px" }}></div>
+      <div style={{ width: `${((questionNum + 1) / jsonData.length) * 100}%`, backgroundColor: "grey", height: "10px" }}></div>
       <div className="QuestionNumDiv">
         <h1 className="text-2xl font-bold">
           Question {questionNum + 1} of 20
