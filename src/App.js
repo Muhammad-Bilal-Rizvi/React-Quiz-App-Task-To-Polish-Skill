@@ -29,3 +29,5 @@ function App() {
 
 export default App;
 
+//First day at expertizo task to completed:
+//https://github.com/Expertizo/React-Test/blob/master/README.md
